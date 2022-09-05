@@ -36,6 +36,7 @@ class DetailTaskActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btn_delete_task).setOnClickListener {
             detailTaskViewModel.deleteTask()
+            finish()
         }
     }
 
