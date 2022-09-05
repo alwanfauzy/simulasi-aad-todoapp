@@ -56,6 +56,7 @@ class AddTaskActivity : AppCompatActivity(), DatePickerFragment.DialogDateListen
                         dueDateMillis = dueDateMillis
                     )
                     addTaskViewModel.addTask(newTask)
+                    finish()
                 } else {
                     Toast.makeText(this, R.string.empty_task_message, Toast.LENGTH_SHORT).show()
                 }

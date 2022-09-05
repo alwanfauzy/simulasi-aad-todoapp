@@ -40,12 +40,13 @@ class DetailTaskActivity : AppCompatActivity() {
         }
     }
 
-    private fun populateDetailTask(task: Task) {
+
+    private fun populateDetailTask(task: Task?) {
         val detailEdTitle = findViewById<TextInputEditText>(R.id.detail_ed_title)
         val detailEdDescription = findViewById<TextInputEditText>(R.id.detail_ed_description)
         val detailEdDueDate = findViewById<TextInputEditText>(R.id.detail_ed_due_date)
 
-        task.apply {
+        task?.apply {
             detailEdTitle.setText(title)
             detailEdDescription.setText(description)
             detailEdDueDate.setText(DateConverter.convertMillisToString(dueDateMillis))
